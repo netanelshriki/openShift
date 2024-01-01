@@ -2,8 +2,8 @@ ReplicaNumber: 3
 
 containers:
   containerPort: 8080
-  image: 'quay.io/net_shr1234/hellocd'
-  tag: 'v2'
+  image: 'quay.io/net_shr1234/helmcd'
+  tag: 'chart_v1'
 
 service:
   servicePort: 8080
