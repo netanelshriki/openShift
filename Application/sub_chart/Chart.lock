@@ -1,6 +1,0 @@
-dependencies:
-- name: openshift
-  repository: oci://ghcr.io/netanelshriki/helm
-  version: 1.0.0
-digest: sha256:0a85c1e21f0e244908c31b27d7be227b9b3a98fb6df8fad2db0504a989cb72af
-generated: "2024-01-02T12:37:03.948227846Z"
