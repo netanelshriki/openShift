@@ -42,8 +42,8 @@ spec:
             successThreshold: 1 # count to decalre seccessfull 
             failureThreshold: 3 # count to decalre failure
           env:
-            - name: PORT
-             value: {{ .Values.containers.containerPort | quote }}
+          - name: PORT
+            value: {{ .Values.containers.containerPort | quote }}
           image: {{ .Values.containers.image }}:{{ .Values.containers.tag }}
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
