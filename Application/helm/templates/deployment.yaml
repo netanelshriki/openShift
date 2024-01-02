@@ -19,9 +19,7 @@ spec:
             name: '{{ .Chart.Name }}-html'
             defaultMode: 420
       containers:
-        - volumeMounts:
-          - name: index-html
-            mountPath: /tmp/html
+
         - resources: {}
           terminationMessagePath: /dev/termination-log
           name: {{ .Chart.Name }}
@@ -32,6 +30,9 @@ spec:
           terminationMessagePolicy: File
           image: {{ .Values.containers.image }}:{{ .Values.containers.tag }}
       restartPolicy: Always
+      - volumeMounts:
+        - name: index-html
+          mountPath: /tmp/html
       terminationGracePeriodSeconds: 30
   strategy:
     type: RollingUpdate
