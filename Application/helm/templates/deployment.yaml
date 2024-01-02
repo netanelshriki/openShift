@@ -31,7 +31,6 @@ spec:
           volumeMounts:
           - name: index-html
             mountPath: /tmp/html
-          image: {{ .Values.containers.image }}:{{ .Values.containers.tag }}
           readinessProbe:
             httpGet:
               path: /health/readiness # this check the application url path
@@ -45,6 +44,7 @@ spec:
           env:
             - name: PORT
              value: {{ .Values.containers.containerPort | quote }}
+          image: {{ .Values.containers.image }}:{{ .Values.containers.tag }}
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
   strategy:
